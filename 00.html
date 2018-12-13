@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+
+    // let obj = {
+    //     name: '俊俊',
+    //     age: 28,
+    //     sex: '女',
+    //     say:function () {
+    //         console.log(this);    //this.obj
+    //         let that = this; //保存外部this
+    //         setTimeout(function () {
+    //             console.log(this);  //this->window
+    //             console.log(that.name);
+    //         },500)
+    //     }
+    // }
+    //
+// let name ='jjj'
+//     let obj ={
+//         name:'俊俊',
+//         age:28,
+//         sex:'女',
+//         say:function () {
+//             // console.log(this);
+//             let that =this
+//             setTimeout(function () {
+//                 console.log(that.name);
+//
+//             }, 1000)
+//
+//         }
+//
+//
+//
+//
+//
+//
+//
+//     }
+//
+//     obj.say()
+//
+//
+
+
+    let name ='jjj'
+        let obj ={
+            name:'俊俊',
+            age:28,
+            sex:'女',
+            say:function () {
+                // console.log(this);
+                let that =this
+                setTimeout( () =>{
+                    console.log(this);
+
+                }, 1000)
+
+            }}
+
+
+
+
+
+    var boj1={
+        haha:function(){
+            setTimeout( () =>{
+                console.log(this);
+
+            }, 1000)
+        }
+
+    }
+
+    boj1.haha()
+
+    // let obj = {
+    //     name: '俊俊',
+    //     age: 28,
+    //     sex: '女',
+    //     say:function () {
+    //         console.log(this);    //this.obj
+
+    //         setTimeout( () => {
+    //             console.log(this);  //this->window
+    //             console.log(this.name);
+    //         },500)
+    //     }
+    // }
+
+
+
+
+
+    // obj.say();
+
+    // let Person = () => {
+    //     this.name = 'zs';
+    //     this.age = 18;
+    //     //在构造函数中this指向新创建实例
+    // }
+    //
+    // let p = new Person();
+    // console.log(p);
+    //
+
+
+    // let arr=()=>{
+    //     this.age=19
+    // }
+    var arr=function(){
+        this.age=18
+    }
+
+    let arr2=new arr()
+    console.log(arr2);
+</script>
+</body>
+</html>
